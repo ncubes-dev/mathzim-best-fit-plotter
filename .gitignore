@@ -1,0 +1,6 @@
+# Local development
+.DS_Store
+.vscode/
+
+# Vercel
+.vercel/

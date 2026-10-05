@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f3a5f">
+<title>Mathzim Best Fit Plotter</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Mathzim Best Fit Plotter</h1><span id="net"></span></header>
+<main>
+  <section class="panel" aria-labelledby="h-data">
+    <h2 id="h-data">Results</h2>
+    <div class="axes">
+      <label>x quantity <input id="xl" placeholder="e.g. length l / m"></label>
+      <label>y quantity <input id="yl" placeholder="e.g. resistance R / Ω"></label>
+    </div>
+    <table>
+      <thead><tr><th>#</th><th id="xh">x</th><th id="yh">y</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="row">
+      <button id="add" class="ghost">Add row</button>
+      <button id="clear" class="ghost">Clear all</button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-graph">
+    <h2 id="h-graph">Graph</h2>
+    <div class="row">
+      <button id="plot">Plot graph</button>
+      <label class="check"><input type="checkbox" id="zero"> Start axes at zero</label>
+    </div>
+    <canvas id="c" role="img" aria-label="Graph of the recorded data with line of best fit"></canvas>
+    <div class="row">
+      <label>Show
+        <select id="prop">
+          <option value="m">Gradient</option>
+          <option value="c">y-intercept</option>
+          <option value="r2">R²</option>
+          <option value="all">Equation of line</option>
+        </select>
+      </label>
+      <output id="out"></output>
+    </div>
+    <button id="png" class="ghost">Save graph as image</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
