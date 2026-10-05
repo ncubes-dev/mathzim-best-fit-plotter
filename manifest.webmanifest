@@ -1,9 +1,9 @@
 {
-  "name": "Mathzim Best Fit Plotter",
+  "name": "Mathzim Bestfit Plotter",
   "short_name": "Mathzim",
   "description": "Record experimental data and plot a line of best fit, offline.",
   "start_url": "/",
-  "scope": "./",
+  "scope": "/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#f7faf5",
